@@ -1,0 +1,21 @@
+import express from 'express';
+import morgan from 'morgan';
+import bodyParser from 'body-parser';
+import apiRoutes from './routes/api';
+import { MORGAN_TYPE } from './constants';
+import handleErrors from './middleware/HandleErrors';
+
+require('dotenv').config();
+
+const PORT = process.env.PORT;
+const HOSTNAME = process.env.HOSTNAME;
+
+const app = express();
+app.use(morgan(MORGAN_TYPE));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/api', apiRoutes);
+app.use(handleErrors);
+
+app.listen(PORT, () => {
+    console.log(`Server is listening on ${HOSTNAME}:${PORT}`);
+});

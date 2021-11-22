@@ -1,0 +1,30 @@
+{
+  "development": {
+    "username": "aobyte",
+    "password": "secret",
+    "database": "aobyte",
+    "host": "127.0.0.1",
+    "port": "5430",
+    "dialect": "postgres",
+    "define":{
+      "timestamps":true,
+      "underscored": true
+    }
+  },
+  "test": {
+    "username": "aobyte",
+    "password": "secret",
+    "database": "aobyte",
+    "host": "127.0.0.1",
+    "port": "5430",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "aobyte",
+    "password": "secret",
+    "database": "aobyte",
+    "host": "127.0.0.1",
+    "port": "5430",
+    "dialect": "postgres"
+  }
+}

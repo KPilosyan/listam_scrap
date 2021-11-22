@@ -1,0 +1,26 @@
+version: '3'
+services:
+  database:
+    image: "postgres"
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    ports:
+      - ${POSTGRES_PORT}:5432
+    volumes:
+      - ${DATA_PATH_HOST}/postgres:/var/lib/postgresql/data/
+    networks:
+      - globalcredit_backend
+  redis:
+    build: ./redis
+    volumes:
+      - ${DATA_PATH_HOST}/redis:/data
+    ports:
+      - "${REDIS_PORT}:6379"
+    networks:
+      - globalcredit_backend
+
+networks:
+  globalcredit_backend:
+    external: ${EXTERNAL_NETWORK}

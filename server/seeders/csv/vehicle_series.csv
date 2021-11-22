@@ -1,0 +1,179 @@
+01.01,Audi,A3,TRUE,5,21
+01.02,Audi,A4,TRUE,5,21
+01.03,Audi,A5,FALSE,5,21
+01.04,Audi,A6,TRUE,5,21
+01.05,Audi,A7,TRUE,5,21
+01.06,Audi,A8,TRUE,5,21
+01.07,Audi,Q5,TRUE,5,21
+01.08,Audi,Q7,TRUE,5,21
+02.01,Bentley,Continental Flying Spur,FALSE,6,26
+02.02,Bentley,Continental GT,FALSE,6,26
+03.01,BMW,1,FALSE,7,31
+03.03,BMW,3,TRUE,7,31
+03.04,BMW,4,FALSE,7,31
+03.05,BMW,5,TRUE,7,31
+03.06,BMW,6,FALSE,7,31
+03.07,BMW,7,TRUE,7,31
+03.13,BMW,X3,TRUE,7,31
+03.15,BMW,X5,TRUE,7,31
+03.16,BMW,X6,TRUE,7,31
+04.01,Chevrolet,Avalanche,FALSE,11,56
+04.02,Chevrolet,Aveo,FALSE,11,56
+04.03,Chevrolet,Cruze,FALSE,11,56
+04.04,Chevrolet,Epica,FALSE,11,56
+05.01,Dodge,Caliber,TRUE,18,91
+05.02,Dodge,Challenger,FALSE,18,91
+05.03,Dodge,Charger,FALSE,18,91
+05.04,Dodge,Magnum,FALSE,18,91
+06.01,Ford,Escape,FALSE,22,116
+06.02,Ford,Explorer,FALSE,22,116
+06.03,Ford,Fiesta,TRUE,22,116
+06.04,Ford,Focus,TRUE,22,116
+06.05,Ford,Fusion,TRUE,22,116
+06.06,Ford,Kuga,TRUE,22,116
+06.07,Ford,Mondeo,TRUE,22,116
+06.08,Ford,Mustang,TRUE,22,116
+07.01,Honda,Accord,TRUE,27,146
+07.02,Honda,Civic,TRUE,27,146
+07.03,Honda,CR-V,TRUE,27,146
+07.04,Honda,Elysion,TRUE,27,146
+07.05,Honda,Fit,FALSE,27,146
+07.06,Honda,Inspire,FALSE,27,146
+07.07,Honda,Odyssey,FALSE,27,146
+07.08,Honda,Pilot,FALSE,27,146
+07.09,Honda,Stepwgn,FALSE,27,146
+08.01,Hummer,H2,FALSE,30,151
+08.02,Hummer,H3,FALSE,30,151
+09.01,Hyundai,Accent,FALSE,31,156
+09.02,Hyundai,Azera,FALSE,31,156
+09.03,Hyundai,Elantra,FALSE,31,156
+09.04,Hyundai,Genesis,FALSE,31,156
+09.05,Hyundai,Grandeur,FALSE,31,156
+09.06,Hyundai,i30,FALSE,31,156
+09.07,Hyundai,i40,FALSE,31,156
+09.08,Hyundai,ix35,TRUE,31,156
+09.09,Hyundai,Santa Fe,TRUE,31,156
+09.10,Hyundai,Solaris,FALSE,31,156
+09.11,Hyundai,Sonata,FALSE,31,156
+09.12,Hyundai,Tiburon,FALSE,31,156
+09.13,Hyundai,Tucson,TRUE,31,156
+09.14,Hyundai,Veloster,TRUE,31,156
+10.01,Infiniti,EX,FALSE,33,166
+10.02,Infiniti,FX,FALSE,33,166
+10.03,Infiniti,G35,FALSE,33,166
+10.04,Infiniti,M,FALSE,33,166
+10.05,Infiniti,Q50,FALSE,33,166
+10.06,Infiniti,QX 4,FALSE,33,166
+10.08,Infiniti,QX 56/80,FALSE,33,166
+11.01,Jeep,Grand Cherokee,TRUE,37,186
+12.01,Kia,Cerato,FALSE,38,191
+12.02,Kia,Forte,FALSE,38,191
+12.03,Kia,Optima,FALSE,38,191
+12.04,Kia,Picanto,FALSE,38,191
+12.05,Kia,Rio,TRUE,38,191
+12.06,Kia,Sorento,TRUE,38,191
+12.07,Kia,Sportage,TRUE,38,191
+13.01,Land Rover,Range Rover,TRUE,41,206
+13.02,Land Rover,Range Rover Discovery,TRUE,41,206
+13.03,Land Rover,Range Rover Evoque,TRUE,41,206
+13.04,Land Rover,Range Rover Sport,TRUE,41,206
+13.05,Land Rover,Range Rover Vogue,TRUE,41,206
+14.01,Lexus,ES,FALSE,42,211
+14.02,Lexus,GS,FALSE,42,211
+14.03,Lexus,GX,FALSE,42,211
+14.04,Lexus,IS,TRUE,42,211
+14.05,Lexus,LS,FALSE,42,211
+14.06,Lexus,LX,TRUE,42,211
+14.07,Lexus,NX,FALSE,42,211
+14.08,Lexus,RX,FALSE,42,211
+15.01,Mazda,3,FALSE,48,241
+15.02,Mazda,6,TRUE,48,241
+15.03,Mazda,CX5,FALSE,48,241
+15.04,Mazda,CX7,FALSE,48,241
+15.05,Mazda,CX9,FALSE,48,241
+15.06,Mazda,MPV,TRUE,48,241
+16.01,Mercedes-Benz,A,TRUE,49,246
+16.02,Mercedes-Benz,B,FALSE,49,246
+16.03,Mercedes-Benz,C,TRUE,49,246
+16.04,Mercedes-Benz,CL,TRUE,49,246
+16.05,Mercedes-Benz,CLA,TRUE,49,246
+16.06,Mercedes-Benz,CLK,TRUE,49,246
+16.07,Mercedes-Benz,CLS,TRUE,49,246
+16.08,Mercedes-Benz,E,TRUE,49,246
+16.09,Mercedes-Benz,G,TRUE,49,246
+16.10,Mercedes-Benz,GL,TRUE,49,246
+16.11,Mercedes-Benz,GLE,TRUE,49,246
+16.12,Mercedes-Benz,GLK,TRUE,49,246
+16.13,Mercedes-Benz,ML,TRUE,49,246
+16.14,Mercedes-Benz,Vito,FALSE,49,246
+16.15,Mercedes-Benz,R,TRUE,49,246
+16.16,Mercedes-Benz,S,TRUE,49,246
+17.01,Mini,Cooper,TRUE,52,261
+18.01,Mitsubishi,AIRTREK,FALSE,53,266
+18.02,Mitsubishi,ASX,FALSE,53,266
+18.03,Mitsubishi,Grandis,TRUE,53,266
+18.04,Mitsubishi,Lancer,TRUE,53,266
+18.05,Mitsubishi,Outlander,TRUE,53,266
+18.06,Mitsubishi,Pajero,TRUE,53,266
+18.07,Mitsubishi,Pajero io,FALSE,53,266
+19.01,Nissan,Almera,TRUE,55,276
+19.02,Nissan,Altima,FALSE,55,276
+19.03,Nissan,Bluebird Sylphy,TRUE,55,276
+19.04,Nissan,Elgrand,TRUE,55,276
+19.05,Nissan,Fuga,FALSE,55,276
+19.06,Nissan,Juke,FALSE,55,276
+19.07,Nissan,March,FALSE,55,276
+19.08,Nissan,Maxima,FALSE,55,276
+19.09,Nissan,Murano,FALSE,55,276
+19.10,Nissan,Pathfinder,TRUE,55,276
+19.11,Nissan,Patrol,TRUE,55,276
+19.12,Nissan,Qashqai,TRUE,55,276
+19.13,Nissan,Rogue,FALSE,55,276
+19.14,Nissan,Skyline,FALSE,55,276
+19.15,Nissan,Sunny,TRUE,55,276
+19.16,Nissan,Teana,FALSE,55,276
+19.17,Nissan,Tiida,FALSE,55,276
+19.18,Nissan,X-Terra,TRUE,55,276
+19.19,Nissan,X-Trail,TRUE,55,276
+19.20,Nissan,NOTE,TRUE,55,276
+19.21,Nissan,VERSA,TRUE,55,276
+20.01,Opel,Astra,TRUE,59,296
+20.02,Opel,Vectra,TRUE,59,296
+20.03,Opel,Zafira,TRUE,59,296
+21.01,Porsche,Cayenne,TRUE,63,316
+21.02,Porsche,Panamera,TRUE,63,316
+22.01,Subaru,Forester,FALSE,74,376
+22.02,Subaru,Impreza,FALSE,74,376
+22.03,Subaru,Legacy,TRUE,74,376
+22.04,Subaru,CROSSTREK,FALSE,74,376
+22.05,Subaru,Outback,FALSE,74,376
+22.06,Subaru,Tribeca,FALSE,74,376
+23.01,Suzuki,Grand Vitara,TRUE,75,381
+23.02,Suzuki,Kizashi,FALSE,75,381
+23.03,Suzuki,Swift,FALSE,75,381
+23.04,Suzuki,SX 4,FALSE,75,381
+24.01,Toyota,Alphard,FALSE,76,386
+24.02,Toyota,Avalon,FALSE,76,386
+24.03,Toyota,Corolla,TRUE,76,386
+24.04,Toyota,Avensis,TRUE,76,386
+24.05,Toyota,Camry,TRUE,76,386
+24.06,Toyota,Highlander,FALSE,76,386
+24.07,Toyota,Land Cruiser 100/200,TRUE,76,386
+24.08,Toyota,Land Cruiser Prado,TRUE,76,386
+24.09,Toyota,Mark X,FALSE,76,386
+24.10,Toyota,Prius,FALSE,76,386
+24.11,Toyota,Rav 4,FALSE,76,386
+24.12,Toyota,Vitz,FALSE,76,386
+24.13,Toyota,Yaris,FALSE,76,386
+24.14,Toyota,Sequoia,FALSE,76,386
+24.15,Toyota,IPSUM,FALSE,76,386
+25.01,VAZ (LADA),Priora,FALSE,78,396
+25.02,VAZ (LADA),Niva,FALSE,78,396
+26.01,Volkswagen,Bora,TRUE,79,401
+26.02,Volkswagen,Golf,TRUE,79,401
+26.03,Volkswagen,Jetta,TRUE,79,401
+26.04,Volkswagen,Passat,TRUE,79,401
+26.05,Volkswagen,Passat CC,FALSE,79,401
+26.06,Volkswagen,Polo,TRUE,79,401
+26.07,Volkswagen,Tiguan,TRUE,79,401
+26.08,Volkswagen,Touareg,TRUE,79,401

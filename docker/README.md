@@ -1,0 +1,1 @@
+~ Start service: `docker-compose up -d`
