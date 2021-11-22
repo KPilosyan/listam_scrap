@@ -1,0 +1,50 @@
+11-11-2021 16:30:05 [error]: ScraperController:start:FAILED {"ERROR":""}
+11-11-2021 16:52:31 [error]: ScraperController:start:FAILED {"ERROR":""}
+11-11-2021 16:59:02 [error]: ScraperController:start:FAILED {"ERROR":""}
+11-11-2021 17:00:27 [error]: ScraperController:start:FAILED {"ERROR":"Unexpected token o in JSON at position 1"}
+11-11-2021 17:03:17 [error]: ScraperController:start:FAILED {"ERROR":"req.body.json is not a function"}
+11-11-2021 17:03:36 [error]: ScraperController:start:FAILED {"ERROR":""}
+11-11-2021 17:04:19 [error]: ScraperController:start:FAILED {"ERROR":""}
+11-11-2021 17:05:02 [error]: ScraperController:start:FAILED {"ERROR":""}
+11-11-2021 17:08:10 [error]: ScraperController:start:FAILED {"ERROR":""}
+11-11-2021 17:08:49 [error]: ScraperController:start:FAILED {"ERROR":"Cannot read property 'source' of undefined"}
+11-11-2021 17:37:28 [error]: ScraperController:start:FAILED {"ERROR":""}
+11-11-2021 17:44:48 [error]: ScraperController:start:FAILED {"ERROR":""}
+11-11-2021 17:46:44 [error]: ScraperController:start:FAILED {"ERROR":""}
+11-11-2021 17:50:17 [info]: ------------ScraperService:start:START--------------- {"uuid":"728a4b6e-fb6a-4682-bf3f-ac784f2dd8d5","source":"list.am","usdRate":500}
+11-11-2021 17:50:17 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+11-11-2021 17:50:17 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+11-11-2021 17:50:18 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+11-11-2021 17:50:19 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+11-11-2021 17:50:19 [info]: ScraperService:createVehicleSettings:SKIPPED 
+11-11-2021 17:50:19 [info]: DBService:createScrappingHistory:START 
+11-11-2021 17:50:19 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+11-11-2021 17:50:19 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+11-11-2021 17:50:19 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":2}
+11-11-2021 17:50:19 [info]: DBService:getVehicleCategories:START 
+11-11-2021 17:50:19 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+11-11-2021 17:50:19 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+11-11-2021 17:50:19 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+11-11-2021 17:50:19 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+11-11-2021 17:50:19 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+11-11-2021 17:50:19 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+11-11-2021 17:50:19 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+11-11-2021 17:50:19 [info]: ScrapVehiclesJob:dispatch:START 
+11-11-2021 17:50:19 [info]: ListAmScraper:getScrapedVehicles:START 
+11-11-2021 17:50:30 [info]: ListAmScraper:getScrapedVehicles:SUCCESS 
+11-11-2021 17:50:30 [info]: DBService:saveVehicles:START {"scrapping_history_id":2}
+11-11-2021 17:50:30 [info]: DBService:saveVehicles:SUCCESS 
+11-11-2021 17:50:30 [info]: ScraperService:scrapVehiclesJob:SUCCESS {"scrapped_vehicles_count":96}
+11-11-2021 17:50:30 [info]: GroupVehiclesJob:dispatch:START 
+11-11-2021 17:50:30 [info]: ScraperService:groupVehiclesJob:SUCCESS {"grouped_vehicles_count":41}
+11-11-2021 17:50:30 [info]: EstimateVehiclesJob:dispatch:START 
+11-11-2021 17:50:30 [info]: DBService:getPreviousEstimatedVehicles:START 
+11-11-2021 17:50:31 [info]: DBService:getPreviousEstimatedVehicles:SUCCESS 
+11-11-2021 17:50:31 [info]: ScraperService:estimateVehiclesJob:SUCCESS {"estimated_vehicles_count":41}
+11-11-2021 17:50:31 [info]: DBService:saveGroupedVehicles:START {"scrapping_history_id":2}
+11-11-2021 17:50:31 [info]: DBService:saveGroupedVehicles:SUCCESS 
+11-11-2021 17:50:31 [info]: DBService:setSeriesCodes:START {"scrapping_history_id":2}
+11-11-2021 17:50:31 [info]: DBService:setSeriesCodes:SUCCESS 
+11-11-2021 17:50:31 [info]: DBService:setScrapingFinished:START {"scrapping_history_id":2}
+11-11-2021 17:50:31 [info]: DBService:setScrapingFinished:SUCCESS 
+11-11-2021 17:50:31 [info]: ------------ScraperService:start:SUCCESS--------------- 

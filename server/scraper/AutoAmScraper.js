@@ -18,7 +18,7 @@ import {
 } from '../constants';
 
 export default class AutoAmScraper extends BaseScraper {
-    constructor (categories, settingsCategories, usdRate) {
+    constructor(categories, settingsCategories, usdRate) {
         super();
         this.instance = null;
         this.page = null;
@@ -32,7 +32,7 @@ export default class AutoAmScraper extends BaseScraper {
         this.usdRate = usdRate;
     }
 
-    async getScrapedVehicles () {
+    async getScrapedVehicles() {
         Logger().info('AutoAmScraper:getScrapedVehicles:START');
 
         const list = [];
@@ -100,7 +100,7 @@ export default class AutoAmScraper extends BaseScraper {
         return data;
     }
 
-    async _loadPage () {
+    async _loadPage() {
         try {
             await this.page.open(this.url);
             await this.sleep(2500);
@@ -109,7 +109,7 @@ export default class AutoAmScraper extends BaseScraper {
         }
     }
 
-    _getSearchQuery (page, mark) {
+    _getSearchQuery(page, mark) {
         // auto.am vehicle query
         const query = {
             category: '1',
@@ -138,7 +138,7 @@ export default class AutoAmScraper extends BaseScraper {
         return JSON.stringify(query);
     }
 
-    async _initPage () {
+    async _initPage() {
         try {
             // setup browser
             this.instance = await phantom.create(['--ignore-ssl-errors=yes', '--load-images=no'], {
@@ -177,7 +177,7 @@ export default class AutoAmScraper extends BaseScraper {
         }
     }
 
-    async _getCarsSingeHtmlPage (carsProperties) {
+    async _getCarsSingeHtmlPage(carsProperties) {
         try {
             const responses = await Promise.all(carsProperties.map(o => this._getPage(o.id)));
 
@@ -218,7 +218,7 @@ export default class AutoAmScraper extends BaseScraper {
         }
     }
 
-    _getCarsList (responsesData) {
+    _getCarsList(responsesData) {
         try {
             // getting car properties from each statement page
             const properties = [];
@@ -239,7 +239,7 @@ export default class AutoAmScraper extends BaseScraper {
         }
     }
 
-    _getCarProperties (carHTMLData) {
+    _getCarProperties(carHTMLData) {
         try {
             // load page DOM
             const $ = cheerio.load(carHTMLData);
@@ -334,11 +334,11 @@ export default class AutoAmScraper extends BaseScraper {
         }
     }
 
-    _getPrice ($el) {
+    _getPrice($el) {
         return +$el('#pricedown').children('.bold').text().replace(/[֏$, ]/g, '');
     }
 
-    _getPriceFromList ($el) {
+    _getPriceFromList($el) {
         return +$el.children('.card-action').eq(0)
             .children('.price').eq(0)
             .children('span')
@@ -346,17 +346,17 @@ export default class AutoAmScraper extends BaseScraper {
             .replace(/[֏$, ]/g, '');
     }
 
-    _getCurrency ($el) {
+    _getCurrency($el) {
         return $el('#pricedown').children('.bold').text().includes(this.dram) ? 'AMD' : 'USD';
     }
 
-    _getDates ($el) {
+    _getDates($el) {
         const date = $el('.left .grey-text').text();
 
         return moment(date, AUTO_AM.DATE_FORMAT).format(SCRAPER_DATE_FORMAT);
     }
 
-    _getPublisherPhoneNumber ($el) {
+    _getPublisherPhoneNumber($el) {
         // e.g tel:+093 64 17 77
         const phoneNumber = $el('#call-seller-form .contact-start div').children('a').attr('href');
 
@@ -368,7 +368,7 @@ export default class AutoAmScraper extends BaseScraper {
         return null;
     }
 
-    _getUrl ($el) {
+    _getUrl($el) {
         const id = this._getId($el);
 
         return `${this.url}offer/${id}`;
@@ -381,7 +381,7 @@ export default class AutoAmScraper extends BaseScraper {
         return id;
     }
 
-    async _getCarsSinglePageProperties (page, mark) {
+    async _getCarsSinglePageProperties(page, mark) {
         try {
             const response = await axiosInstance.post(
                 this.url + 'search',
@@ -432,7 +432,7 @@ export default class AutoAmScraper extends BaseScraper {
         }
     }
 
-    async _setAxiosHeaders () {
+    async _setAxiosHeaders() {
         try {
             Logger().info('AutoAmScraper:setAxiosHeaders:START');
 

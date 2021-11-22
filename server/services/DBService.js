@@ -98,10 +98,10 @@ export default class DBService {
                     approved: true,
                     status: models.scrappingHistory.FINISHED,
                     source: {
-                        [Op.or]: [ source.toUpperCase(), null ], // source = LIST.AM or AUTO.AM or null (which is first initialed scrapped data)
+                        [Op.or]: [source.toUpperCase(), null], // source = LIST.AM or AUTO.AM or null (which is first initialed scrapped data)
                     },
                 },
-                order: [ ['updatedAt', 'DESC'] ],
+                order: [['updatedAt', 'DESC']],
             });
 
             const vehicles = await scrapingHistory.getEstimatedVehicles();

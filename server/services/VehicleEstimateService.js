@@ -45,3 +45,17 @@ export default class VehicleEstimateService {
         }
     }
 }
+// const buildings = {
+//     sale: {
+//         'appartment': 61,
+//         'house': 56
+//     },
+//     rent: {
+//         'appartment': 62,
+//         'house': 63
+//     },
+// }
+
+// Object.keys(buildings).forEach(key => {
+
+// })

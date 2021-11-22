@@ -29,7 +29,7 @@ export default class ScraperService {
 
         const scraper = isSourceAutoAm(this.source)
             ? new AutoAmScraper(sourceCategories, settingsCategories, usdRate)
-            : new ListAmScraper(sourceCategories, settingsCategories, usdRate);
+            : new ListAmScraper();
 
         const scrapVehiclesJob = new ScrapVehiclesJob(scraper, id);
         const groupVehiclesJob = new GroupVehiclesJob(id, usdRate, this.vehicleSettings);

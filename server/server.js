@@ -1,6 +1,5 @@
 import express from 'express';
 import morgan from 'morgan';
-import bodyParser from 'body-parser';
 import apiRoutes from './routes/api';
 import { MORGAN_TYPE } from './constants';
 import handleErrors from './middleware/HandleErrors';
@@ -12,7 +11,8 @@ const HOSTNAME = process.env.HOSTNAME;
 
 const app = express();
 app.use(morgan(MORGAN_TYPE));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use('/api', apiRoutes);
 app.use(handleErrors);
 
