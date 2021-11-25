@@ -2,6 +2,7 @@ import cheerio from 'cheerio';
 import moment from 'moment';
 import BaseScraper from './BaseScraper';
 import axios from '../modules/axios';
+import _ from 'lodash';
 import Logger from '../modules/Logger';
 import {
     AMD,
@@ -13,22 +14,19 @@ import {
 } from '../constants';
 const XLSX = require('xlsx');
 
-export default class ListAmScraper extends BaseScraper {
+export default class RealEstateScraper extends BaseScraper {
     constructor() {
         super();
         this.url = LIST_AM.URL;
         this.realEstateCategory = LIST_AM.REALESTATE_CATEGORY;
         this.delay = LIST_AM.PER_PAGE_DELAY;
-        this.nextPage = 'Next >';
     }
 
-    // to see the results of scraping, console.log(properties) -> _getRealEstateProperties
-
     async scrapRealEstates() {
-        Logger().info('ListAmScraper:scrapRealEstates:START');
+        Logger().info('RealEstateScraper:scrapRealEstates:START');
         try {
             let pageNumber = 1;
-            let scrappedRealEstates = {};
+            let scrappedRealEstates = [];
 
             for (let i = 1; i <= pageNumber; i++) {
                 const $ = await this._loadPage(pageNumber);
@@ -38,45 +36,53 @@ export default class ListAmScraper extends BaseScraper {
                 $('#star').remove();
                 $('#tp').remove();
 
-                if (this.nextPage) {
+                if (this._checkNextPage($)) {
                     pageNumber++;
                 }
 
                 const perPageRealEstatesData = await this._getPerPageRealEstatesList($);
-                scrappedRealEstates[`page${i}`] = perPageRealEstatesData;
+                const data = await Promise.all(perPageRealEstatesData.map(async v => {
+                    return { ...v };
+                }));
+                scrappedRealEstates.push(...data);
+
+                // we need to "sleep" to avoid blocking
+                await this.sleep(this.delay);
             }
 
             if (!scrappedRealEstates) {
-                Logger().error('ListAmScraper:scrapRealEstates:FAILED');
+                Logger().error('RealEstateScraper:scrapRealEstates:FAILED');
 
                 throw new Error('ListAm scraping failed');
             }
 
-            Logger().info('ListAmScraper:scrapRealEstates:SUCCESS');
+            this.convertJsonToExcel(scrappedRealEstates);
+
+            Logger().info('RealEstateScraper:scrapRealEstates:SUCCESS');
 
             return scrappedRealEstates;
         } catch (e) {
-            Logger().error({ message: 'ListAmScraper:scrapRealEstates:FAILED', ERROR: e.message });
+            Logger().error({ message: 'RealEstateScraper:scrapRealEstates:FAILED', ERROR: e.message });
         }
     }
 
     async convertJsonToExcel(data) {
-        const workSheet = XLSX.utils.json_to_sheet(data);
-        const workBook = XLSX.utils.book_new();
+        try {
+            const scrapedRealEstate = 'scrapedRealEstate.xlsx';
 
-        XLSX.utils.book_append_sheet(workBook, workSheet, 'data');
-        // Generate buffer
-        XLSX.write(workBook, { bookType: 'xlsx', type: 'buffer' });
-
-        // Binary string
-        XLSX.write(workBook, { bookType: 'xlsx', type: 'binary' });
-
-        XLSX.writeFile(workBook, 'scrapedRealEstate.xlsx');
+            const workBook = XLSX.utils.book_new();
+            const workSheet = XLSX.utils.json_to_sheet(data);
+            XLSX.utils.book_append_sheet(workBook, workSheet, 'RealEstates');
+            XLSX.writeFile(workBook, scrapedRealEstate);
+        } catch (e) {
+            Logger().error({ message: 'RealEstateScraper:convertJsonToExcel:FAILED', ERROR: e.message });
+        }
     }
 
     async _getPerPageRealEstatesList($el) {
         try {
-            let data = {};
+            let data = [];
+            let urls = [];
             let aTags = $el('.dl').children('a');
 
             // pages with 1 column listing are <dl><gl> 'a' tags </gl></dl>
@@ -89,22 +95,22 @@ export default class ListAmScraper extends BaseScraper {
             let currentPageRSCount = aTags.length;
 
             for (let i = 0; i < currentPageRSCount; i++) {
-                const url = await this._getUrlById(aTags, i);
-                const singleRSHtml = await this._getSingleRSHtmlPage(url);
-                const rsProperties = await this._getRealEstateProperties(singleRSHtml);
-                data[`rs${i}`] = rsProperties;
-
-                // we need to "sleep" to avoid blocking
-                await this.sleep(this.delay);
+                urls.push(await this._getUrlsById(aTags, i));
             }
-            this.convertJsonToExcel(Object.values(data));
-            return Object.values(data);
+            const singleRSHtmls = await this._getSingleRSHtmlPage(urls);
+            const allRSProperties = await Promise.all(singleRSHtmls.map(async rsHtml => this._getRealEstateProperties(rsHtml)));
+            // We don't need the ads of type 'wanted'
+            const filteredAllRSProperties = allRSProperties.filter(rsProperties => !rsProperties.hasOwnProperty('wanted'));
+
+            data.push(filteredAllRSProperties);
+            // data is list of list of objects. We need list of objects
+            return data[0];
         } catch (e) {
-            Logger().error({ message: 'ListAmScraper:getPerPageRealEstatesList:FAILED', ERROR: e.message });
+            Logger().error({ message: 'RealEstateScraper:getPerPageRealEstatesList:FAILED', ERROR: e.message });
         }
     }
 
-    async _getUrlById(aTags, rsId) {
+    async _getUrlsById(aTags, rsId) {
         const url = aTags.eq(rsId).attr('href');
         return `${this.url}${url}`;
     }
@@ -116,7 +122,7 @@ export default class ListAmScraper extends BaseScraper {
             // load page DOM
             return cheerio.load(data);
         } catch (e) {
-            Logger().error({ message: 'ListAmScraper:_loadPage:FAILED', ERROR: e.message });
+            Logger().error({ message: 'RealEstateScraper:_loadPage:FAILED', ERROR: e.message });
         }
     }
 
@@ -129,19 +135,17 @@ export default class ListAmScraper extends BaseScraper {
 
             return response.data;
         } catch (e) {
-            Logger().error({ message: 'ListAmScraper:_getRealEstatesHtmlPage:FAILED', ERROR: e.message });
+            Logger().error({ message: 'RealEstateScraper:_getRealEstatesHtmlPage:FAILED', ERROR: e.message });
         }
     }
 
-    async _getSingleRSHtmlPage(url) {
+    async _getSingleRSHtmlPage(urls) {
         try {
-            const response = await this._getPageData(url);
-            // remove failed requests
-            if (!response.error) {
-                return response.data;
-            }
+            const responses = await Promise.all(urls.map(url => this._getPageData(url)));
+
+            return _.filter(responses, (o) => !o.error).map(_ => _.data);
         } catch (e) {
-            Logger().error({ message: 'ListAmScraper:_getSingleRSHtmlPage:FAILED', ERROR: e.message });
+            Logger().error({ message: 'RealEstateScraper:_getSingleRSHtmlPage:FAILED', ERROR: e.message });
         }
     }
 
@@ -154,7 +158,7 @@ export default class ListAmScraper extends BaseScraper {
                 error: false,
             };
         } catch (e) {
-            Logger().error({ message: 'ListAmScraper:_getPageData:FAILED', url });
+            Logger().error({ message: 'RealEstateScraper:_getPageData:FAILED', url });
 
             return {
                 data: null,
@@ -165,17 +169,17 @@ export default class ListAmScraper extends BaseScraper {
 
     _checkNextPage($el) {
         try {
-            $el('.dlf').eq(0).children('span').remove();
-            const text = $el('.dlf').eq(0).children('a').text();
-
+            let text = $el('.dlf').children('.pp').next().text();
             // check the next page exist
-            if (text && text.includes(this.nextPage)) {
+            if (text && text === 'Next >') {
                 this.nextPage = true;
+            } else {
+                this.nextPage = false;
             }
 
             return this.nextPage;
         } catch (e) {
-            Logger().error({ message: 'ListAmScraper:checkNextPage:FAILED', ERROR: e.message });
+            Logger().error({ message: 'RealEstateScraper:checkNextPage:FAILED', ERROR: e.message });
         }
     }
 
@@ -192,8 +196,9 @@ export default class ListAmScraper extends BaseScraper {
         if ($el('.price').text().toLowerCase().includes('daily')) {
             paymentFrequency = 'daily';
         }
-
-        return { priceText, paymentFrequency };
+        if (priceText) {
+            return { priceText, paymentFrequency };
+        }
     }
 
     _getAdditionalInfo($el) {
@@ -219,7 +224,7 @@ export default class ListAmScraper extends BaseScraper {
 
             return additionalInfo;
         } catch (e) {
-            Logger().error({ message: 'ListAmScraper:getRealEstatesSinglePageProperties:FAILED', ERROR: e.message });
+            Logger().error({ message: 'RealEstateScraper:getRealEstatesSinglePageProperties:FAILED', ERROR: e.message });
         }
     }
 
@@ -306,7 +311,7 @@ export default class ListAmScraper extends BaseScraper {
 
             return footer;
         } catch (e) {
-            Logger().error({ message: 'ListAmScraper:getDates:FAILED', ERROR: e.message });
+            Logger().error({ message: 'RealEstateScraper:getDates:FAILED', ERROR: e.message });
         }
     }
 
@@ -336,36 +341,37 @@ export default class ListAmScraper extends BaseScraper {
 
             const properties = {};
             properties.title = this._getTitle($);
-            const { priceText, paymentFrequency } = this._getPrice($);
-            properties.price = priceText;
-            if (paymentFrequency) {
-                properties.paymentFrequency = paymentFrequency;
+            if (this._getPrice($)) {
+                const { priceText, paymentFrequency } = this._getPrice($);
+                properties.price = priceText;
+                if (paymentFrequency) {
+                    properties.paymentFrequency = paymentFrequency;
+                }
             }
+            properties.currency = this._getCurrency($);
 
             let additionalInfo = this._getAdditionalInfo($);
             Object.keys(additionalInfo).map((key) => {
                 properties[key] = additionalInfo[key];
             });
             properties.location = this._getLocation($);
-            properties.currency = this._getCurrency($);
             properties.description = this._getDescription($);
-
-            const { created, id, renewed } = this._getFooterInfo($);
-            properties.publishedDate = created;
-            properties.publishedId = id;
-            properties.url = this._getAdUrl(id);
-            properties.renewed = renewed;
-
-            properties.publisherPhoneNumber = await this._getPublisherPhoneNumber(id);
             let attributes = this._getAttributes($);
             Object.keys(attributes).map((key) => {
                 properties[key] = attributes[key];
             });
+            const { created, id, renewed } = this._getFooterInfo($);
+            properties.publishedId = id;
+            properties.publisherPhoneNumber = await this._getPublisherPhoneNumber(id);
 
-            // to see the results of scrap, console.log(properties)
+            properties.publishedDate = created;
+            properties.renewed = renewed;
+
+            properties.url = this._getAdUrl(id);
+
             return properties;
         } catch (e) {
-            Logger().error({ message: 'ListAmScraper:getRealEstateProperties:FAILED', ERROR: e.message });
+            Logger().error({ message: 'RealEstateScraper:getRealEstateProperties:FAILED', ERROR: e.message });
         }
     }
 

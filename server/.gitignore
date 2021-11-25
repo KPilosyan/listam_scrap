@@ -3,3 +3,4 @@ build
 coverage
 .env
 .DS_Store
+logs

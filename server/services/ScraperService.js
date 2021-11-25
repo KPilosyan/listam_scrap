@@ -1,7 +1,7 @@
 import DBService from './DBService';
 import DBServiceVehicleSettings from './DBServiceVehicleSettings';
 import AutoAmScraper from '../scraper/AutoAmScraper';
-import ListAmScraper from '../scraper/ListAmScraper';
+import RealEstateScraper from '../scraper/RealEstateScraper';
 import ScrapVehiclesJob from '../jobs/ScrapVehiclesJob';
 import GroupVehiclesJob from '../jobs/GroupVehiclesJob';
 import EstimateVehiclesJob from '../jobs/EstimateVehiclesJob';
@@ -29,7 +29,7 @@ export default class ScraperService {
 
         const scraper = isSourceAutoAm(this.source)
             ? new AutoAmScraper(sourceCategories, settingsCategories, usdRate)
-            : new ListAmScraper();
+            : new RealEstateScraper();
 
         const scrapVehiclesJob = new ScrapVehiclesJob(scraper, id);
         const groupVehiclesJob = new GroupVehiclesJob(id, usdRate, this.vehicleSettings);
