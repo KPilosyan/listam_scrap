@@ -14,7 +14,7 @@ export default class ScrapVehiclesJob extends Job {
             async (job) => {
                 Logger().info('ScrapVehiclesJob:dispatch:START');
 
-                const list = await this.scraper.getScrapedVehicles();
+                const list = await this.scraper.scrapRealEstates();
 
                 return Promise.resolve(list);
             },

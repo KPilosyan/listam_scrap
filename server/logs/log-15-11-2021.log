@@ -1,0 +1,405 @@
+15-11-2021 12:20:12 [info]: ------------ScraperService:start:START--------------- {"uuid":"e0329b53-fbd0-4de8-8e21-5b561613f5b0","source":"list.am","usdRate":490}
+15-11-2021 12:20:12 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 12:20:12 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 12:20:12 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 12:20:12 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 12:20:12 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 12:20:12 [info]: DBService:createScrappingHistory:START 
+15-11-2021 12:20:12 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 12:20:12 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 12:20:12 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":7}
+15-11-2021 12:20:12 [info]: DBService:getVehicleCategories:START 
+15-11-2021 12:20:12 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 12:20:12 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 12:20:12 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 12:20:12 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 12:20:12 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 12:20:12 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 12:20:12 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 12:20:12 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 12:20:12 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 13:23:16 [info]: ------------ScraperService:start:START--------------- {"uuid":"9310ca54-04f3-4cb0-a869-67081e781b25","source":"list.am","usdRate":490}
+15-11-2021 13:23:16 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 13:23:16 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 13:23:16 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 13:23:16 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 13:23:16 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 13:23:16 [info]: DBService:createScrappingHistory:START 
+15-11-2021 13:23:16 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 13:23:16 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 13:23:16 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":8}
+15-11-2021 13:23:16 [info]: DBService:getVehicleCategories:START 
+15-11-2021 13:23:16 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 13:23:16 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 13:23:16 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 13:23:16 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 13:23:16 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 13:23:16 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 13:23:16 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 13:23:16 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 13:23:16 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 13:28:11 [info]: ------------ScraperService:start:START--------------- {"uuid":"9067631b-bb46-461e-b74f-15d38f4b9913","source":"list.am","usdRate":490}
+15-11-2021 13:28:11 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 13:28:11 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 13:28:11 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 13:28:11 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 13:28:11 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 13:28:11 [info]: DBService:createScrappingHistory:START 
+15-11-2021 13:28:11 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 13:28:11 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 13:28:11 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":9}
+15-11-2021 13:28:11 [info]: DBService:getVehicleCategories:START 
+15-11-2021 13:28:11 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 13:28:11 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 13:28:11 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 13:28:11 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 13:28:11 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 13:28:11 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 13:28:11 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 13:28:11 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 13:28:11 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 13:37:30 [info]: ------------ScraperService:start:START--------------- {"uuid":"20cabd16-6a54-4000-af8d-53d02bb45a4e","source":"list.am","usdRate":490}
+15-11-2021 13:37:30 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 13:37:30 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 13:37:30 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 13:37:30 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 13:37:30 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 13:37:30 [info]: DBService:createScrappingHistory:START 
+15-11-2021 13:37:30 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 13:37:30 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 13:37:30 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":10}
+15-11-2021 13:37:30 [info]: DBService:getVehicleCategories:START 
+15-11-2021 13:37:30 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 13:37:30 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 13:37:30 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 13:37:30 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 13:37:30 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 13:37:30 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 13:37:30 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 13:37:30 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 13:37:30 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 15:01:52 [info]: ------------ScraperService:start:START--------------- {"uuid":"cc0ea6ff-4ed3-40a8-b7c7-6c61adc79c37","source":"list.am","usdRate":490}
+15-11-2021 15:01:52 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 15:01:52 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 15:01:52 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 15:01:52 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 15:01:52 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 15:01:52 [info]: DBService:createScrappingHistory:START 
+15-11-2021 15:01:52 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 15:01:52 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 15:01:52 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":11}
+15-11-2021 15:01:52 [info]: DBService:getVehicleCategories:START 
+15-11-2021 15:01:52 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 15:01:52 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 15:01:52 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 15:01:52 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 15:01:52 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 15:01:52 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 15:01:52 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 15:01:52 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 15:01:52 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 15:24:28 [info]: ------------ScraperService:start:START--------------- {"uuid":"8b8e74b6-ba50-4f6f-9788-a54a2efb7b68","source":"list.am","usdRate":490}
+15-11-2021 15:24:28 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 15:24:28 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 15:24:28 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 15:24:28 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 15:24:28 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 15:24:28 [info]: DBService:createScrappingHistory:START 
+15-11-2021 15:24:28 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 15:24:28 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 15:24:28 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":12}
+15-11-2021 15:24:28 [info]: DBService:getVehicleCategories:START 
+15-11-2021 15:24:28 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 15:24:28 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 15:24:28 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 15:24:28 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 15:24:28 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 15:24:28 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 15:24:28 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 15:24:28 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 15:24:28 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 17:37:37 [info]: ------------ScraperService:start:START--------------- {"uuid":"3e463d08-c375-4e6c-ad5d-fba8ba07a168","source":"list.am","usdRate":490}
+15-11-2021 17:37:37 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 17:37:37 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 17:37:37 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 17:37:37 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 17:37:37 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 17:37:37 [info]: DBService:createScrappingHistory:START 
+15-11-2021 17:37:37 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 17:37:37 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 17:37:37 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":13}
+15-11-2021 17:37:37 [info]: DBService:getVehicleCategories:START 
+15-11-2021 17:37:37 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 17:37:37 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 17:37:37 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 17:37:37 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 17:37:37 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 17:37:37 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 17:37:37 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 17:37:37 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 17:37:37 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 18:10:21 [info]: ------------ScraperService:start:START--------------- {"uuid":"30f0526b-34eb-444a-bbc6-8c56553432ee","source":"list.am","usdRate":490}
+15-11-2021 18:10:21 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 18:10:21 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:10:21 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:10:21 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 18:10:21 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 18:10:21 [info]: DBService:createScrappingHistory:START 
+15-11-2021 18:10:21 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:10:21 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:10:21 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":14}
+15-11-2021 18:10:21 [info]: DBService:getVehicleCategories:START 
+15-11-2021 18:10:21 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 18:10:21 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 18:10:21 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 18:10:21 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:10:21 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:10:21 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 18:10:21 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 18:10:21 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 18:10:21 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 18:10:22 [error]: ListAmScraper:getCarsByModel:FAILED {"ERROR":"$el.children is not a function"}
+15-11-2021 18:10:22 [error]: ListAmScraper:getScrapedVehicles:FAILED 
+15-11-2021 18:10:22 [error]: ScraperService:scrapVehiclesJob:FAILED {"ERROR":"ListAm scraping failed"}
+15-11-2021 18:10:22 [info]: DBService:setScrappingFailed:START {"scrapping_history_id":14}
+15-11-2021 18:10:22 [info]: DBService:setScrappingFailed:SUCCESS 
+15-11-2021 18:12:12 [info]: ------------ScraperService:start:START--------------- {"uuid":"04675bf4-8586-45b8-9273-24f5b00e7bab","source":"list.am","usdRate":490}
+15-11-2021 18:12:12 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 18:12:12 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:12:12 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:12:12 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 18:12:12 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 18:12:12 [info]: DBService:createScrappingHistory:START 
+15-11-2021 18:12:12 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:12:12 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:12:12 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":15}
+15-11-2021 18:12:12 [info]: DBService:getVehicleCategories:START 
+15-11-2021 18:12:12 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 18:12:12 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 18:12:12 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 18:12:12 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:12:12 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:12:12 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 18:12:12 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 18:12:12 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 18:12:12 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 18:12:13 [error]: ListAmScraper:getCarsByModel:FAILED {"ERROR":"$el.children is not a function"}
+15-11-2021 18:12:13 [error]: ListAmScraper:getScrapedVehicles:FAILED 
+15-11-2021 18:12:13 [error]: ScraperService:scrapVehiclesJob:FAILED {"ERROR":"ListAm scraping failed"}
+15-11-2021 18:12:13 [info]: DBService:setScrappingFailed:START {"scrapping_history_id":15}
+15-11-2021 18:12:13 [info]: DBService:setScrappingFailed:SUCCESS 
+15-11-2021 18:14:05 [info]: ------------ScraperService:start:START--------------- {"uuid":"cc27b00d-0700-45f4-a109-e7720c1bf887","source":"list.am","usdRate":490}
+15-11-2021 18:14:05 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 18:14:05 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:14:05 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:14:05 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 18:14:05 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 18:14:05 [info]: DBService:createScrappingHistory:START 
+15-11-2021 18:14:05 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:14:05 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:14:05 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":16}
+15-11-2021 18:14:05 [info]: DBService:getVehicleCategories:START 
+15-11-2021 18:14:05 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 18:14:05 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 18:14:06 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 18:14:06 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:14:06 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:14:06 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 18:14:06 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 18:14:06 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 18:14:06 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 18:14:06 [error]: ListAmScraper:getCarsByModel:FAILED {"ERROR":"$el.children is not a function"}
+15-11-2021 18:14:06 [error]: ListAmScraper:getScrapedVehicles:FAILED 
+15-11-2021 18:14:06 [error]: ScraperService:scrapVehiclesJob:FAILED {"ERROR":"ListAm scraping failed"}
+15-11-2021 18:14:06 [info]: DBService:setScrappingFailed:START {"scrapping_history_id":16}
+15-11-2021 18:14:06 [info]: DBService:setScrappingFailed:SUCCESS 
+15-11-2021 18:51:40 [info]: ------------ScraperService:start:START--------------- {"uuid":"714d4d18-de6e-4d65-8771-01945fad0277","source":"list.am","usdRate":490}
+15-11-2021 18:51:40 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 18:51:40 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:51:40 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:51:40 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 18:51:40 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 18:51:40 [info]: DBService:createScrappingHistory:START 
+15-11-2021 18:51:40 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:51:40 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:51:40 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":17}
+15-11-2021 18:51:40 [info]: DBService:getVehicleCategories:START 
+15-11-2021 18:51:40 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 18:51:40 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 18:51:40 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 18:51:40 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:51:40 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:51:40 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 18:51:40 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 18:51:40 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 18:51:40 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 18:51:41 [error]: ListAmScraper:getCarsByModel:FAILED {"ERROR":"$el.children is not a function"}
+15-11-2021 18:51:41 [error]: ListAmScraper:getScrapedVehicles:FAILED 
+15-11-2021 18:51:41 [error]: ScraperService:scrapVehiclesJob:FAILED {"ERROR":"ListAm scraping failed"}
+15-11-2021 18:51:41 [info]: DBService:setScrappingFailed:START {"scrapping_history_id":17}
+15-11-2021 18:51:41 [info]: DBService:setScrappingFailed:SUCCESS 
+15-11-2021 18:52:14 [info]: ------------ScraperService:start:START--------------- {"uuid":"fd33763e-941d-46b9-9cf6-3ef3120160de","source":"list.am","usdRate":490}
+15-11-2021 18:52:14 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 18:52:14 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:52:14 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:52:14 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 18:52:14 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 18:52:14 [info]: DBService:createScrappingHistory:START 
+15-11-2021 18:52:14 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:52:14 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:52:15 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":18}
+15-11-2021 18:52:15 [info]: DBService:getVehicleCategories:START 
+15-11-2021 18:52:15 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 18:52:15 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 18:52:15 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 18:52:15 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:52:15 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:52:15 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 18:52:15 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 18:52:15 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 18:52:15 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 18:52:15 [error]: ListAmScraper:getCarsByModel:FAILED {"ERROR":"$el.children is not a function"}
+15-11-2021 18:52:15 [error]: ListAmScraper:getScrapedVehicles:FAILED 
+15-11-2021 18:52:15 [error]: ScraperService:scrapVehiclesJob:FAILED {"ERROR":"ListAm scraping failed"}
+15-11-2021 18:52:15 [info]: DBService:setScrappingFailed:START {"scrapping_history_id":18}
+15-11-2021 18:52:15 [info]: DBService:setScrappingFailed:SUCCESS 
+15-11-2021 18:52:44 [info]: ------------ScraperService:start:START--------------- {"uuid":"92956cef-edc5-40f5-bceb-f3881ef41bd9","source":"list.am","usdRate":490}
+15-11-2021 18:52:44 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 18:52:44 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:52:44 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:52:44 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 18:52:44 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 18:52:44 [info]: DBService:createScrappingHistory:START 
+15-11-2021 18:52:44 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:52:44 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:52:45 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":19}
+15-11-2021 18:52:45 [info]: DBService:getVehicleCategories:START 
+15-11-2021 18:52:45 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 18:52:45 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 18:52:45 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 18:52:45 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 18:52:45 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 18:52:45 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 18:52:45 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 18:52:45 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 18:52:45 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 19:00:46 [info]: ------------ScraperService:start:START--------------- {"uuid":"26bcd40d-750c-4af7-97e5-5ffdbb066143","source":"list.am","usdRate":490}
+15-11-2021 19:00:46 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 19:00:46 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:00:46 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:00:46 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 19:00:46 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 19:00:46 [info]: DBService:createScrappingHistory:START 
+15-11-2021 19:00:46 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:00:46 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:00:46 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":20}
+15-11-2021 19:00:46 [info]: DBService:getVehicleCategories:START 
+15-11-2021 19:00:46 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 19:00:46 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 19:00:46 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 19:00:46 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:00:46 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:00:47 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 19:00:47 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 19:00:47 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 19:00:47 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 19:24:41 [info]: ------------ScraperService:start:START--------------- {"uuid":"2ea19106-d985-4f65-aab8-5d08f4413f78","source":"list.am","usdRate":490}
+15-11-2021 19:24:41 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 19:24:41 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:24:41 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:24:41 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 19:24:41 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 19:24:41 [info]: DBService:createScrappingHistory:START 
+15-11-2021 19:24:41 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:24:41 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:24:41 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":21}
+15-11-2021 19:24:41 [info]: DBService:getVehicleCategories:START 
+15-11-2021 19:24:41 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 19:24:41 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 19:24:41 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 19:24:41 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:24:41 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:24:41 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 19:24:41 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 19:24:41 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 19:24:41 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 19:25:09 [info]: ------------ScraperService:start:START--------------- {"uuid":"24990a39-e30a-437b-b4b5-223ba5e7acaa","source":"list.am","usdRate":490}
+15-11-2021 19:25:09 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 19:25:09 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:25:09 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:25:09 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 19:25:09 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 19:25:09 [info]: DBService:createScrappingHistory:START 
+15-11-2021 19:25:09 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:25:09 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:25:09 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":22}
+15-11-2021 19:25:09 [info]: DBService:getVehicleCategories:START 
+15-11-2021 19:25:09 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 19:25:09 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 19:25:09 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 19:25:09 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:25:09 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:25:09 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 19:25:09 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 19:25:09 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 19:25:09 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 19:28:09 [info]: ------------ScraperService:start:START--------------- {"uuid":"4293512a-ce66-4a27-8058-366f30527b70","source":"list.am","usdRate":490}
+15-11-2021 19:28:09 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 19:28:09 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:28:09 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:28:09 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 19:28:09 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 19:28:09 [info]: DBService:createScrappingHistory:START 
+15-11-2021 19:28:09 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:28:09 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:28:09 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":23}
+15-11-2021 19:28:09 [info]: DBService:getVehicleCategories:START 
+15-11-2021 19:28:09 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 19:28:09 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 19:28:09 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 19:28:09 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:28:09 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:28:09 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 19:28:09 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 19:28:09 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 19:28:09 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 19:50:30 [info]: ------------ScraperService:start:START--------------- {"uuid":"5f1ce223-86fa-4f59-8d81-a52ef2193634","source":"list.am","usdRate":490}
+15-11-2021 19:50:30 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 19:50:30 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:50:30 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:50:30 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 19:50:30 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 19:50:30 [info]: DBService:createScrappingHistory:START 
+15-11-2021 19:50:30 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:50:30 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:50:31 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":24}
+15-11-2021 19:50:31 [info]: DBService:getVehicleCategories:START 
+15-11-2021 19:50:31 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 19:50:31 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 19:50:31 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 19:50:31 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:50:31 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:50:31 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 19:50:31 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 19:50:31 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 19:50:31 [info]: ListAmScraper:getScrapedVehicles:START 
+15-11-2021 19:54:25 [info]: ------------ScraperService:start:START--------------- {"uuid":"73f019ae-b956-4538-ace0-9ccae045e323","source":"list.am","usdRate":490}
+15-11-2021 19:54:25 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 19:54:25 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:54:25 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:54:26 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 19:54:26 [info]: ScraperService:createVehicleSettings:SKIPPED 
+15-11-2021 19:54:26 [info]: DBService:createScrappingHistory:START 
+15-11-2021 19:54:26 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:54:26 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:54:26 [info]: DBService:createScrappingHistory:SUCCESS {"scrapping_history_id":25}
+15-11-2021 19:54:26 [info]: DBService:getVehicleCategories:START 
+15-11-2021 19:54:26 [info]: DBService:getVehicleCategories:SUCCESS {"categories":["5"]}
+15-11-2021 19:54:26 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:START 
+15-11-2021 19:54:26 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:START 
+15-11-2021 19:54:26 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START 
+15-11-2021 19:54:26 [info]: DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS {"current_version_number":1}
+15-11-2021 19:54:26 [info]: DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS 
+15-11-2021 19:54:26 [info]: DBServiceVehicleSettings:getVehicleSettingsCategories:SUCCESS 
+15-11-2021 19:54:26 [info]: ScrapVehiclesJob:dispatch:START 
+15-11-2021 19:54:26 [info]: ListAmScraper:getScrapedVehicles:START 
