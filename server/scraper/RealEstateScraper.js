@@ -7,7 +7,6 @@ import Logger from '../modules/Logger';
 import {
     AMD,
     LIST_AM,
-    PHONE_NUMBER_CODE,
     SCRAPER_DATE_FORMAT,
     USD,
     USER_AGENT,
@@ -45,6 +44,7 @@ export default class RealEstateScraper extends BaseScraper {
                     return { ...v };
                 }));
                 scrappedRealEstates.push(...data);
+                console.log('Page Number: ', i);
 
                 // we need to "sleep" to avoid blocking
                 await this.sleep(this.delay);
@@ -187,54 +187,59 @@ export default class RealEstateScraper extends BaseScraper {
         return $el('.vih').children('h1').text();
     }
 
-    _getPrice($el) {
-        let paymentFrequency = null;
-        let priceText = $el('.price').text().replace(/[֏$,]|monthly|daily/g, '').trim();
-        if ($el('.price').text().toLowerCase().includes('monthly')) {
-            paymentFrequency = 'monthly';
-        }
-        if ($el('.price').text().toLowerCase().includes('daily')) {
-            paymentFrequency = 'daily';
-        }
-        if (priceText) {
-            return { priceText, paymentFrequency };
-        }
-    }
+    // _getPrice($el) {
+    //     let paymentFrequency = null;
+    //     const { id } = this._getFooterInfo($el);
 
-    _getAdditionalInfo($el) {
-        try {
-            const additionalInfo = {};
-            const additionalInfoTags = $el('.vih').find('span');
-            let i = 0;
-            // if price is provided, additional info is 2nd span tag
-            if (this._getPrice($el)) {
-                i = 1;
-            }
-            for (i; i < additionalInfoTags.length; i++) {
-                let additionalInfoName = additionalInfoTags.eq(i).text().toLowerCase();
+    //     let priceText = $el('.xprice').has('span').text().replace(/[֏$,]|monthly|daily/g, '').trim();
+    //     if (priceText.indexOf(' ') === '-1') {
+    //         console.log(this._getAdUrl(id), priceText);
+    //     }
 
-                if (additionalInfoName.substring(0, 4) === 'code') {
-                    let additionalInfoKey = 'code';
-                    const additionalInfoValue = additionalInfoName.substring(5, additionalInfoName.length);
-                    additionalInfo[additionalInfoKey] = additionalInfoValue;
-                } else {
-                    additionalInfo[additionalInfoName] = true;
-                }
-            }
+    //     if ($el('.xprice').has('span').text().toLowerCase().includes('monthly')) {
+    //         paymentFrequency = 'monthly';
+    //     }
+    //     if ($el('.xprice').has('span').text().toLowerCase().includes('daily')) {
+    //         paymentFrequency = 'daily';
+    //     }
+    //     if (priceText) {
+    //         return { priceText, paymentFrequency };
+    //     }
+    // }
 
-            return additionalInfo;
-        } catch (e) {
-            Logger().error({ message: 'RealEstateScraper:getRealEstatesSinglePageProperties:FAILED', ERROR: e.message });
-        }
+    // _getAdditionalInfo($el) {
+    //     try {
+    //         const additionalInfo = {};
+    //         const additionalInfoTags = $el('.l');
+    //         let i = 0;
+    //         // if price is provided, additional info is 2nd span tag
+    //         // if (this._getPrice($el)) {
+    //         //     i = 1;
+    //         // }
+    //         console.log('additionalInfoName...', additionalInfoTags.length)
+    //         for (i; i < additionalInfoTags.length; i++) {
+    //             let additionalInfoName = additionalInfoTags.eq(i).text().toLowerCase();
+
+    //             additionalInfo[additionalInfoName] = true;
+    //         }
+
+    //         return additionalInfo;
+    //     } catch (e) {
+    //         Logger().error({ message: 'RealEstateScraper:getRealEstatesSinglePageProperties:FAILED', ERROR: e.message });
+    //     }
+    // }
+
+    _getIsAgency($el) {
+        return $el('.clabel').text().includes('Agency') ? 'Yes' : '';
     }
 
     _getLocation($el) {
         return $el('.loc').text();
     }
 
-    _getDescription($el) {
-        return $el("*[itemprop = 'description']").text();
-    }
+    // _getDescription($el) {
+    //     return $el("*[itemprop = 'description']").text();
+    // }
 
     _getPriceFromList($el) {
         return +$el.children('.p').text().replace(/[֏$,]/g, '').trim();
@@ -242,29 +247,29 @@ export default class RealEstateScraper extends BaseScraper {
 
     _getCurrency($el) {
         // getting currency from DOM element id "pricedown", e.g. 5000$
-        return $el('.price').text().includes('$') ? USD : AMD;
+        return $el('.price x').text().includes('$') ? USD : AMD;
     }
 
-    _getAttributes($el) {
-        const propertyList = $el('#attr').children('.c');
-        const ApartmentInfo = {};
+    // _getAttributes($el) {
+    //     const propertyList = $el('#attr').children('.c');
+    //     const ApartmentInfo = {};
 
-        for (let i = 0; i < propertyList.length; i++) {
-            const item = propertyList.eq(i);
+    //     for (let i = 0; i < propertyList.length; i++) {
+    //         const item = propertyList.eq(i);
 
-            const propertyKey = item.children('.t').text().trim().toLowerCase();
-            const propertyValue = item.children('.i').text().trim().toUpperCase();
+    //         const propertyKey = item.children('.t').text().trim().toLowerCase();
+    //         const propertyValue = item.children('.i').text().trim().toUpperCase();
 
-            ApartmentInfo[propertyKey] = propertyValue;
-        }
-        return ApartmentInfo;
-    }
+    //         ApartmentInfo[propertyKey] = propertyValue;
+    //     }
+    //     return ApartmentInfo;
+    // }
 
     _getFooterInfo($el) {
         try {
-            const dateText = 'Date:';
-            const referenceIdText = 'Ad reference:';
-            const renewedText = 'Renewed:';
+            const referenceIdText = 'Ad id';
+            const dateText = 'Posted';
+            const renewedText = 'Renewed';
 
             const footer = {
                 created: null,
@@ -301,7 +306,8 @@ export default class RealEstateScraper extends BaseScraper {
                 }
 
                 if (item.text().includes(renewedText)) {
-                    const renewedDate = item.text().substring(8, 26).trim();
+                    const renewedDate = item.text().substring(8, 18).trim();
+
                     // LL format example -> November 19, 2020
                     footer.renewed = moment(renewedDate, 'LL').format(SCRAPER_DATE_FORMAT);
 
@@ -320,15 +326,20 @@ export default class RealEstateScraper extends BaseScraper {
     }
 
     async _getPublisherPhoneNumber(publisherId) {
-        const response = await axios.get(`${this.url}/?w=12&&i=${publisherId}`);
-
+        const url = this._getAdUrl(publisherId);
+        const response = await axios.get(`${this.url}/?w=12&&i=${publisherId}`, {
+            headers: {
+                'Referer': url,
+            },
+        });
         const $ = cheerio.load(response.data);
-        // e.g tel:093641777, viber://chat?number=+37496692977
+        // e.g tel:093641777, viber://chat?number=37496692977
         const phoneNumber = $('#callPhoneInfo').find('.phones').children('a').attr('href');
-
-        // We need to modify the string e.g tel:093641777 => +37493641777
+        // We need to modify the string e.g tel:093641777 => 093641777
         if (phoneNumber) {
-            return PHONE_NUMBER_CODE + phoneNumber.slice(-8);
+            const rawPhoneNumber = phoneNumber.replace(/\D/g, '');
+
+            return rawPhoneNumber;
         }
 
         return null;
@@ -340,34 +351,38 @@ export default class RealEstateScraper extends BaseScraper {
             const $ = cheerio.load(realEstateHTMLData);
 
             const properties = {};
-            properties.title = this._getTitle($);
-            if (this._getPrice($)) {
-                const { priceText, paymentFrequency } = this._getPrice($);
-                properties.price = priceText;
-                if (paymentFrequency) {
-                    properties.paymentFrequency = paymentFrequency;
-                }
-            }
-            properties.currency = this._getCurrency($);
-
-            let additionalInfo = this._getAdditionalInfo($);
-            Object.keys(additionalInfo).map((key) => {
-                properties[key] = additionalInfo[key];
-            });
-            properties.location = this._getLocation($);
-            properties.description = this._getDescription($);
-            let attributes = this._getAttributes($);
-            Object.keys(attributes).map((key) => {
-                properties[key] = attributes[key];
-            });
             const { created, id, renewed } = this._getFooterInfo($);
-            properties.publishedId = id;
-            properties.publisherPhoneNumber = await this._getPublisherPhoneNumber(id);
 
+            properties.title = this._getTitle($);
+            properties.url = this._getAdUrl(id);
+            properties.agency = this._getIsAgency($);
+            properties.location = this._getLocation($);
+            properties.publishedId = id;
             properties.publishedDate = created;
             properties.renewed = renewed;
 
-            properties.url = this._getAdUrl(id);
+            properties.publisherPhoneNumber = await this._getPublisherPhoneNumber(id);
+
+            // if (this._getPrice($)) {
+            //     const { priceText, paymentFrequency } = this._getPrice($);
+            //     properties.price = priceText;
+            //     if (paymentFrequency) {
+            //         properties.paymentFrequency = paymentFrequency;
+            //     }
+            //     properties.currency = this._getCurrency($);
+            // }
+
+            // properties.description = this._getDescription($);
+
+            // let attributes = this._getAttributes($);
+            // Object.keys(attributes).map((key) => {
+            //     properties[key] = attributes[key];
+            // });
+
+            // let additionalInfo = this._getAdditionalInfo($);
+            // Object.keys(additionalInfo).map((key) => {
+            //     properties[key] = additionalInfo[key];
+            // });
 
             return properties;
         } catch (e) {
