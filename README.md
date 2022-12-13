@@ -19,12 +19,12 @@ Use the package manager [npm](https://nodejs.org/en/) to install.
 Server listens  http://localhost:4005
 ```
 
-```
 ### How to run list_am
 
 Send post request in postman to http://localhost:4005/api/start, 
 
 with json body: 
+```
 {
     "usdRate": "400",
     "source": "list.am"
