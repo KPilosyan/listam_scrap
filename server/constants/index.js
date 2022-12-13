@@ -5,7 +5,7 @@ export const LIST_AM_PAGE_COUNT = 250; // 1 page = 90 cars
 export const LIST_AM = {
     NAME: 'list.am',
     URL: 'https://www.list.am',
-    REALESTATE_CATEGORY: 'category/58/',
+    REALESTATE_CATEGORY: 'category/56/',
     PER_PAGE_DELAY: 1000, // 1 second,
     DATE_FORMAT: 'DD-MM-YYYY',
     CLEARED_CUSTOMS: 1, // 0 - all, 1 - yes 2 - no

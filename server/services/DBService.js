@@ -11,21 +11,22 @@ export default class DBService {
 
     async createScrappingHistory(uuid, usdRate, source) {
         try {
-            Logger().info('DBService:createScrappingHistory:START');
-
-            const settingsVersion = await this.dbServiceVehicleSettings.getVehicleSettingsLatestVersionNumber();
-
-            const response = await models.scrappingHistory.create({
-                uuid,
-                usdRate,
-                source: source.toUpperCase(),
-                status: models.scrappingHistory.PENDING,
-                settingsVersion,
-            });
-
-            Logger().info({ message: 'DBService:createScrappingHistory:SUCCESS', scrapping_history_id: response.id });
-
-            return response;
+            // Logger().info('DBService:createScrappingHistory:START');
+            //
+            // const settingsVersion = await this.dbServiceVehicleSettings.getVehicleSettingsLatestVersionNumber();
+            //
+            // const response = await models.scrappingHistory.create({
+            //     uuid,
+            //     usdRate,
+            //     source: source.toUpperCase(),
+            //     status: models.scrappingHistory.PENDING,
+            //     settingsVersion,
+            // });
+            //
+            // Logger().info({ message: 'DBService:createScrappingHistory:SUCCESS'});
+            //
+            // return response;
+            return 0;
         } catch (e) {
             Logger().error({ message: 'DBService:createScrappingHistory:FAILED', uuid, ERROR: e.message });
         }

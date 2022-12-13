@@ -27,13 +27,14 @@ export default class DBServiceVehicleSettings {
 
     async getVehicleSettingsLatestVersionNumber() {
         try {
-            Logger().info({ message: 'DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START' });
-
-            const currentVersionNumber = await models.vehicleSettings.max('version');
-
-            Logger().info({ message: 'DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS', current_version_number: currentVersionNumber });
-
-            return currentVersionNumber;
+            // Logger().info({ message: 'DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:START' });
+            //
+            // const currentVersionNumber = await models.vehicleSettings.max('version');
+            //
+            // Logger().info({ message: 'DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:SUCCESS', current_version_number: currentVersionNumber });
+            //
+            // return currentVersionNumber;
+            return 0;
         } catch (e) {
             Logger().error('DBServiceVehicleSettings:getVehicleSettingsLatestVersionNumber:FAILED');
         }
@@ -41,19 +42,20 @@ export default class DBServiceVehicleSettings {
 
     async getVehicleSettings() {
         try {
-            Logger().info({ message: 'DBServiceVehicleSettings:getVehicleLatestSettings:START' });
-
-            const settingsVersion = await this.getVehicleSettingsLatestVersionNumber();
-
-            const vehicleSettings = await models.vehicleSettings.findAll({
-                where: {
-                    version: settingsVersion,
-                },
-            });
-
-            Logger().info({ message: 'DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS' });
-
-            return vehicleSettings;
+            // Logger().info({ message: 'DBServiceVehicleSettings:getVehicleLatestSettings:START' });
+            //
+            // const settingsVersion = await this.getVehicleSettingsLatestVersionNumber();
+            //
+            // const vehicleSettings = await models.vehicleSettings.findAll({
+            //     where: {
+            //         version: settingsVersion,
+            //     },
+            // });
+            //
+            // Logger().info({ message: 'DBServiceVehicleSettings:getVehicleLatestSettings:SUCCESS' });
+            //
+            // return vehicleSettings;
+            return {};
         } catch (e) {
             Logger().error('DBServiceVehicleSettings:getVehicleLatestSettings:FAILED');
         }

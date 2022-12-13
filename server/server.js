@@ -5,7 +5,7 @@ import { MORGAN_TYPE } from './constants';
 import handleErrors from './middleware/HandleErrors';
 
 require('dotenv').config();
-
+process.setMaxListeners(0);
 const PORT = process.env.PORT;
 const HOSTNAME = process.env.HOSTNAME;
 
